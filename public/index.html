@@ -1,43 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    <title>Welcome to IIIT Bangalore</title>
+</head>
+<body>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+<h1 style="text-align:center"> Data Masking Tool </h1>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+<form action="#" id="getdetails"  method="post">
+
+    <label for="algorithm">ALGORITHM</label>
+    <select name="algorithm" id="algorithm">
+        <option value="select">Select an algorithm</option>
+        <option value="algorithm_1">algorithm_1</option>
+        <option value="algorithm_2">algorithm_2</option>
+        <option value="algorithm_3">algorithm_3</option>
+    </select>
+    <br>
+    <label for="schemaPath">Schema Path:</label><br>
+    <input type="text" id="schemaPath" name="schemaPath" value=""><br>
+    <label for="datasetPath">DataSet Path:</label><br>
+    <input type="text" id="datasetPath" name="datasetPath" value=""><br><br>
+    <p><i/> ENTER PARAMETERS </p>
+
+    <label for="parameter">parameters</label>
+    <select multiple name="element" id="parameter">
+        <option value="select">Select an element</option>
+        <option value="element_1">element_1</option>
+        <option value="element_2">element_2</option>
+        <option value="element_3">element_3</option>
+    </select>
+    <br>  <br>
+    <label for="value">VALUE</label>
+    <select name="value" id="value">
+        <option value="select">Select a value</option>
+        <option value="value_1">value_1</option>
+        <option value="value_2">value_2</option>
+        <option value="value_3">value_3</option>
+    </select>
+    <br><br>
+    <label for="configurationName">CONFIGURATION NAME:</label><br>
+    <input type="text" id="configurationName" name="configurationName" value=""><br>
+    <label for="outputFileName">OUTPUT FILE NAME:</label><br>
+    <input type="text" id="outputFileName" name="outputFileName" value=""><br>
+
+    <input type="submit" value="Submit" />
+</form>
+
+<!-- JS -->
+<script src="/home/naidu/my-app/src/details.js"></script>
+</body>
+
 </html>
