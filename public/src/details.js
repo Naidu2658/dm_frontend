@@ -6,15 +6,23 @@ det.addEventListener('submit', async (e) => {
     e.stopPropagation();
 
         let selected = [];
+        
         for(let option of document.getElementById('parameter').options)
         {
+            
             if (option.selected) {
-                let temp=new Array(2);
-                temp[0]=option.value;
-                temp[1]=document.getElementById('value').value;
+                let temp ={};
+                let element = option.value;
+                let value = document.getElementById('value').value;
+                temp['element']=element;
+                temp['value']=value;
+                
+                
                 selected.push(temp);
             }
         }
+        // console.log(selected);
+        
         let response = await fetch('http://localhost:8090/configuration', {
             method: 'POST',
             headers: {
@@ -22,11 +30,11 @@ det.addEventListener('submit', async (e) => {
                 
             },
 
-        body: JSON.stringify({
+            body: JSON.stringify({
             algorithm: document.getElementById('algorithm').value,
             schemaPath: document.getElementById('schemaPath').value,
             datasetPath: document.getElementById('datasetPath').value,
-            parameters: Object.assign({}, selected),
+            parameters: selected,
             configurationName: document.getElementById('configurationName').value,
             outputFileName: document.getElementById('outputFileName').value
         })
